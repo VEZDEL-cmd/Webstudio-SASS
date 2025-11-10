@@ -1,12 +1,12 @@
-@use "bose/colors";
-@use "bose/reset";
-@use "bose/typography";
-@use "layout/business";
-@use "layout/clients";
-@use "layout/footer";
-@use "layout/header";
+@use "base/_colors";
+@use "base/_reset";
+@use "base/_typography";
+@use "layout/business"; 
+@use "layout/_clients";
+@use "layout/_footer";
+@use "layout/_header";
 @use "layout/main";
-@use "layout/work-team";
-@use "layout/work";
+@use "layout/_work-team";
+@use "layout/_work";
 
 

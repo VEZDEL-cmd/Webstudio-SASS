@@ -71,7 +71,7 @@
    color: var(--text-color);
  }
 
- .container {
+ /* .container {
    width: 1200px;
    margin: 0 auto;
    padding-left: 12px;
@@ -271,7 +271,7 @@
    font-weight: 500;
    line-height: normal;
    letter-spacing: 0.28px;
- }
+ } */
 
 
 
@@ -1035,7 +1035,7 @@
    filter: brightness(70%);
  }
 
-
+/* 
 
  @keyframes fadeInUp {
    0% {
@@ -1059,4 +1059,7 @@
      opacity: 1;
      transform: translateY(0);
    }
- }
+ } */
+
+
+/* МИ ДЕЛАЕМ РЕПРОЦЕСОР SASS SCSS */

@@ -1,0 +1,90 @@
+@use "../base/colors" as c;
+@use "../base/typography" as t;
+ 
+//  .advantages-list {
+//   display: flex;
+//   justify-content: space-between;
+//   gap: 30px;
+//   padding: 94px 0;
+
+  .advantages-item {
+    width: 270px;
+    text-align: left;
+
+    .advantages-icon {
+      width: 270px;
+      height: 120px;
+      margin-bottom: 30px;
+       background-color: c.$footer-bg;  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        width: 70px;
+        height: 70px;
+      fill: c.$footer-bg;
+      }
+    }
+  }
+
+
+//  .advantages {
+//   &-list {
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 30px;
+//     padding: 94px 0;
+//   }
+
+//   &-item {
+//     width: 270px;
+//     text-align: left;
+//   }
+
+//   &-icon {
+//     width: 270px;
+//     height: 120px;
+//     margin-bottom: 30px;
+//     background-color: $footer-bg;  
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
+
+ 
+.icon {
+  width: 70px;
+  height: 70px;
+  fill: $footer-bg;
+}
+
+.advantages-list {
+ display: flex;
+    padding: 94px 0;
+    column-gap:30px;
+    justify-content: center;
+}
+ .advantages-item {
+    color: color.$standart-text;
+    font-size:  t.$standart-font-size;
+    font-weight:  t.$standart-weight;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin: 0 0 0 0;
+}
+ .advantages-text{
+    color: color.$add-information;
+    font-size:  t.$standart-font-size;
+    font-weight: 400;
+    line-height: 1.71429;
+    letter-spacing: 0.42px;
+}
+.advantages-icon{
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    background-color: color.$ourteam;
+}
