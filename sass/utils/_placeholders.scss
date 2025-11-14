@@ -1,0 +1,25 @@
+@use "../base/colors" as c;
+@use "../base/typography" as t;
+@use "../utils/mixin" as m;
+ 
+
+%list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%btn {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  @include m.transition(all);
+}
+
+%section-title {
+ 
+  @include m.font(36px, t.$standart-weight, 1.16, 0.06em);
+  text-align: center;
+  margin-bottom: 50px;
+  
+}

@@ -1,11 +1,27 @@
 @use "../base/colors" as c;
 @use "../base/typography" as t;
+@use "../utils/mixin";
+@use "../utils/placeholders";
+
+
  
-//  .advantages-list {
-//   display: flex;
-//   justify-content: space-between;
-//   gap: 30px;
-//   padding: 94px 0;
+.advantages {
+  padding: 94px 0;
+  background-color: #fff;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .advantages-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
   .advantages-item {
     width: 270px;
@@ -15,7 +31,7 @@
       width: 270px;
       height: 120px;
       margin-bottom: 30px;
-       background-color: c.$footer-bg;  
+      background-color: #f5f4fa;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -23,40 +39,39 @@
       .icon {
         width: 70px;
         height: 70px;
-      fill: c.$footer-bg;
+        fill: #2f303a;
+        transition: transform 0.3s ease, fill 0.3s ease;
       }
     }
+
+    &:hover .advantages-icon .icon {
+      transform: scale(1.1);
+      fill: #2196f3;
+    }
+
+    .advantages-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #212121;
+      margin-bottom: 12px;
+    }
+
+    .advantages-text {
+      font-size: 14px;
+      line-height: 1.714;
+      letter-spacing: 0.42px;
+      color: #757575;
+    }
   }
+}
 
-
-//  .advantages {
-//   &-list {
-//     display: flex;
-//     justify-content: space-between;
-//     gap: 30px;
-//     padding: 94px 0;
-//   }
-
-//   &-item {
-//     width: 270px;
-//     text-align: left;
-//   }
-
-//   &-icon {
-//     width: 270px;
-//     height: 120px;
-//     margin-bottom: 30px;
-//     background-color: $footer-bg;  
-//     align-items: center;
-//     justify-content: center;
-//   }
-// }
+ 
 
  
 .icon {
   width: 70px;
   height: 70px;
-  fill: $footer-bg;
+  fill: c.$footer-bg;
 }
 
 .advantages-list {
@@ -66,7 +81,7 @@
     justify-content: center;
 }
  .advantages-item {
-    color: color.$standart-text;
+    color: c.$text-color;
     font-size:  t.$standart-font-size;
     font-weight:  t.$standart-weight;
     line-height: normal;
@@ -75,7 +90,7 @@
     margin: 0 0 0 0;
 }
  .advantages-text{
-    color: color.$add-information;
+    color: c.$accent-color;
     font-size:  t.$standart-font-size;
     font-weight: 400;
     line-height: 1.71429;
@@ -86,5 +101,5 @@
     height: 120px;
     padding: 25px 100px;
     margin-bottom: 30px;
-    background-color: color.$ourteam;
+    background-color: c.$black;
 }
