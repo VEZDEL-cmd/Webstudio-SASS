@@ -556,84 +556,74 @@ body {
   color: #2196f3;
 }
 
-.team-title {
+.work-team {
+  padding: 94px 0;
+}
+.work-team .team-title {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
-  padding: 94px 0 50px;
+  margin-bottom: 50px;
 }
-.team-list {
+.work-team .team-list {
   display: flex;
-  justify-content: space-;
+  justify-content: space-between;
   gap: 30px;
-  padding-bottom: 94px;
 }
-.team-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s;
-}
-.team-li {
+.work-team .team-li {
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
-}
-.team-img {
   padding-bottom: 30px;
 }
-.team-name {
+.work-team .team-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
+}
+.work-team .team-name {
   text-align: center;
   font-size: 16px;
   font-weight: 500;
   color: #212121;
   margin-bottom: 10px;
 }
-.team-subtitle {
+.work-team .team-subtitle {
   text-align: center;
   font-size: 16px;
   font-weight: 400;
   color: #757575;
   margin-bottom: 30px;
 }
-.team .social-list {
+.work-team .social-list {
   display: flex;
   justify-content: center;
-  justify-content: space-around;
-  gap: 17px;
-  margin: 28px 0 42px;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
-.team .social-list-item {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  padding-bottom: 94px;
+.work-team .social-list-item {
+  display: block;
 }
-.team .social-list-link {
+.work-team .social-list-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
 }
-.team .social-list-link:hover {
+.work-team .social-list-link:hover {
   background-color: #2196f3;
 }
-.team .social-list__icon {
+.work-team .social-list-link:hover .social-list-icon {
+  fill: #ffffff;
+}
+.work-team .social-list-icon {
   fill: #afb1b8;
   transition: fill 0.3s;
-}
-.team .social-list__link:hover .social-list__icon {
-  fill: #ffffff;
 }
 
 .advantages {
@@ -745,22 +735,21 @@ body {
   visibility: hidden;
   pointer-events: none;
 }
-.callback-modal.is-hidden__content {
+.callback-modal.is-hidden .callback-modal__content {
   transform: scale(0.9) translateY(-20px);
   opacity: 0;
 }
 .callback-modal__content {
   width: 528px;
   max-width: 90%;
-  height: 651px;
   background: #ffffff;
   border-radius: 8px;
   padding: 30px;
   position: relative;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   transform: scale(1);
   opacity: 1;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 .callback-modal__close {
   position: absolute;
@@ -777,86 +766,85 @@ body {
   font-size: 18px;
   line-height: 1;
   cursor: pointer;
+  color: #212121;
   transition: border-color 0.2s, color 0.2s;
 }
 .callback-modal__close:hover {
   border-color: #afb1b8;
   color: #2196f3;
 }
-.callback-modal__form-group {
-  position: relative;
-  margin-bottom: 15px;
+
+.callback-form {
+  display: flex;
+  flex-direction: column;
 }
-.callback-modal__form-group input {
+.callback-form__group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.callback-form__group input {
   width: 100%;
   padding: 12px 12px 12px 40px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  font-size: 14px;
 }
-.callback-modal__form-group-label {
-  color: #757575;
-  font-family: Roboto;
+.callback-form__label {
+  display: block;
   font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.12px;
+  color: #757575;
+  margin-bottom: 5px;
 }
-.callback-modal__form-group__icon {
+.callback-form__icon {
   position: absolute;
   left: 12px;
-  top: 70%;
-  transform: translateY(-50%);
+  bottom: 12px;
   width: 18px;
   height: 18px;
   fill: #212121;
 }
-.callback-modal__form textarea {
+.callback-form textarea {
   width: 100%;
-  max-width: 448px;
   height: 120px;
-  color: rgba(117, 117, 117, 0.5);
-  font-family: Roboto;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.12px;
-  border-radius: 4px;
-  border: 1px solid #afb1b8;
-  padding: 12px;
   resize: none;
+  padding: 12px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #212121;
 }
-.callback-modal__form__checkbox {
+.callback-form__checkbox {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  margin-top: 20px;
-  padding-left: 15px;
-  font-family: Roboto;
+  margin-bottom: 20px;
   font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.42px;
+  line-height: 20px;
   color: #757575;
 }
-.callback-modal__form__checkbox a {
+.callback-form__checkbox a {
   color: #2196f3;
   text-decoration: underline;
 }
-.callback-modal__form__submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px auto 40px;
+.callback-form__checkbox input {
+  margin-top: 3px;
+}
+.callback-form__submit {
   width: 200px;
   height: 50px;
+  margin: 0 auto;
   border: none;
   border-radius: 4px;
   background: #2196f3;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   transition: background 0.2s;
 }
-.callback-modal__form__submit:hover {
-  background: #2196f3;
+.callback-form__submit:hover {
+  background: rgb(57.1923076923, 161.4423076923, 244.3076923077);
 }
 
 .portfolio-ulbuttons {
