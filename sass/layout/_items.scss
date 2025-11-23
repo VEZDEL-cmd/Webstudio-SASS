@@ -4,146 +4,179 @@
 @use "../utils/mixin";
 @use "../utils/placeholders";
 
- 
+
 .portfolio {
-  &-ulbuttons {
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.4s;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin: 94px 0 50px;
-  }
+  @media screen and (min-width: 320px) {
+    .portfolio-button {
+      border-radius: 4px;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.4s;
+      background: c.$ourteam;
+      color: c.$standart-text;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.625;
+      letter-spacing: 0.48px;
+      padding: 6px 22px;
+      border: none;
+      flex-shrink: 0;
+      @include mixin.transition(stroke);
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &-libuttons {
-    transition:
-      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-      border-radius: 10px;
-      background-color: c.$primary-color;
-      color: c.$white;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-    }
-  }
-
-  &-button {
-    padding: 6px 22px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 26px;
-    letter-spacing: 0.48px;
-    border: none;
-    border-radius: 4px;
-    background-color: #f5f4fa;
-    color: c.$text-color;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-
-    &:hover,
-    &:focus {
-      background-color: c.$primary-color;
-      color: c.$white;
-      box-shadow:
-        0px 3px 1px rgba(0, 0, 0, 0.1),
-        0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
-    }
-  }
-
-  &-li {
-    width: calc((100% - 60px) / 3);
-    border: 1px solid #eee;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
-    &:hover {
-      box-shadow:
-        0px 1px 1px rgba(0, 0, 0, 0.2),
-        0px 4px 4px rgba(0, 0, 0, 0.2),
-        1px 4px 6px rgba(0, 0, 0, 0.2);
-    }
-  }
-
-  &-img-container {
-    position: relative;
-    overflow: hidden;
-
-    &:hover {
-      .portfolio-img {
-        transform: scale(1.05);
-        filter: brightness(70%);
+      &:hover {
+        background: c.$button;
+        color: c.$h1text;
+        box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.10),
+                    0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+                    0px 2px 2px 0px rgba(0, 0, 0, 0.12);
       }
+    }
 
-      .portfolio-div-p {
+    .portfolio-title {
+      color: c.$standart-text;
+      font-size: 18px;
+      font-weight: t.$standart-weight;
+      line-height: 2;
+      letter-spacing: 1.08px;
+    }
+
+    .portfolio-text {
+      color: c.$add-information;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.875;
+      letter-spacing: 0.48px;
+    }
+
+    .portfolio-ulbuttons {
+      display: flex;
+      column-gap: 8px;
+      row-gap: 15px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: start;
+      width: auto;
+      padding: 40px 0 60px;
+      padding-right: 21px;
+      white-space: nowrap;
+    }
+
+  }
+
+    .portfolio-portfolio {
+      display: flex;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding-bottom: 94px;
+
+      > li {
+        border: 1px solid c.$portfolio;
+        background: c.$h1text;
+        flex-basis: 100%;
+        @include mixin.transition(stroke);
+
+        &:hover {
+          box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12),
+                      0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+                      1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+        }
+
+        > h3 {
+          padding: 20px 0 4px 24px;
+        }
+
+        > p {
+          padding: 0 0 20px 24px;
+        }
+      }
+    }
+
+    .portfolio-div {
+      position: relative;
+      overflow: hidden;
+
+      &:hover .portfolio-div-p {
         transform: translateY(0);
       }
     }
+
+    .portfolio-div-p {
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: translateY(100%);
+      transition: transform 250ms ease-in-out;
+      color: #FFF;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.555;
+      letter-spacing: 0.54px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 24px;
+      background: rgba(33, 150, 243, 0.9);
+    }
+
+    .portfolio-image {
+      width: 100%;
+    }
   }
 
-  &-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
+  @media screen and (min-width: 768px) {
+    .portfolio-portfolio > li {
+      gap: 30px;
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    .portfolio-ulbuttons {
+      display: flex;
+      column-gap: 8px;
+      margin: 0 auto;
+      justify-content: center;
+      width: auto;
+      padding: 60px 0 30px;
+      white-space: nowrap;
+    }
   }
 
-  &-div-p {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transform: translateY(100%);
-    transition: transform 0.25s ease-in-out;
-    color: c.$white;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.555;
-    letter-spacing: 0.54px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 24px;
-    background: rgba(c.$primary-color, 0.9);
-    transition:
-      transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
+  @media screen and (min-width: 1200px) {
+    .portfolio-button {
+      border-radius: 4px;
+      background: c.$ourteam;
+      color: c.$standart-text;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.625;
+      letter-spacing: 0.48px;
+      padding: 6px 22px;
+      border: none;
+      flex-shrink: 0;
+      @include mixin.transition(stroke);
 
+      &:hover {
+        background: c.$button;
+        color: c.$h1text;
+        box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.10),
+                    0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+                    0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    .portfolio-portfolio > li {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+
+    .portfolio-ulbuttons {
+      padding: 94px 0;
+      justify-content: center;
+    }
+  }
  
-.items {
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 94px;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
 
-  &-img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  &-title {
-    margin: 20px 24px 4px;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 0.06em;
-    color: c.$text-color;
-  }
-
-  &-subtitle {
-    margin: 0 24px 20px;
-    font-size: 16px;
-    line-height: 30px;
-    color: c.$accent-color;
-  }
-}
  

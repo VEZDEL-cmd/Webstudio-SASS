@@ -3,48 +3,94 @@
 @use "../utils/mixin";
 @use "../utils/placeholders";
 
+
+
+
 .clients {
-  height: 372px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 94px;
+  padding-bottom: 94px;
 
-  &-title {
-    color: c.$text-color;
+  .clients-title {
+    @extend %main-h2-text;
     text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1.08px;
-    padding-top: 94px;
-    margin-bottom: 50px;
+    padding-bottom: 30px;
   }
 
-  &-list {
+  .clients-list {
     display: flex;
-    justify-content: space-between;
-  }
-
-  &-sublist {
-    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 92px;
-    border-radius: 4px;
-    border: 1px solid c.$icon-color;
-    transition: border-color 0.3s, fill 0.3s;
+    padding-top: 30px;
 
-    &:hover {
-      border-color: c.$primary-color;
+    .clients-sublist {
+      display: block;
 
-      .clients-svg {
-        fill: c.$primary-color;
+      .clients-list-link {
+        display: block;
+        padding: 16px 51px;
+        border-radius: 4px;
+        border: 1px solid #AFB1B8;
+        text-align: center;
+        background-color: transparent;
+
+    @include mixin.transition(fill);
+        &:hover {
+          border-color: c.$button;
+
+          svg.clients-svg {
+            fill: c.$button;
+          }
+        }
+
+        svg.clients-svg {
+          width: 106px;
+          height: 60px;
+          fill: #AFB1B8;
+          @include mixin.transition(fill);
+        }
       }
     }
   }
 
-  &-svg {
-    display: flex;
-    fill: c.$icon-color;
-    width: 106px;
-    height: 60px;
+ 
+  @media screen and (min-width: 768px) {
+    .clients-list-link {
+      padding: 16px 59px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .clients-list {
+      gap: 30px;
+      margin-top: 50px;
+      justify-content: flex-start;
+    }
+
+    .clients-list-link {
+      padding: 16px 32px;
+      width: 170px;
+      height: 92px;
+      border-radius: 4px;
+      border: 1px solid #AFB1B8;
+
+      &:hover {
+        border-color: c.$button;
+
+        svg.clients-svg {
+          fill: c.$button;
+        }
+      }
+
+      svg.clients-svg {
+        width: 106px;
+        height: 60px;
+        fill: #AFB1B8;
+       @include mixin.transition(fill);
+      }
+    }
   }
 }

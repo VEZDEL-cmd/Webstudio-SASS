@@ -1,206 +1,339 @@
 @use "../base/colors" as c;
 @use "../layout/animations";
 @use "../base/typography" as t;
-@use "../utils/mixin";
+@use "../utils/mixin" as *;
 @use "../utils/placeholders";
 
- .container {
-   width: 1200px;
-   margin: 0 auto;
-   padding-left: 12px;
-   padding-right: 12px;
- }
 
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid c.$line;
 
- .header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 24px 0 25px;
-   border-bottom: 1px solid #ccc;
- }
+  @media screen and (min-width:320px) {
+    .header-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
- .header .container {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: 50px;
- }
+      .header-menu {
+        width: 40px;
+        height: 40px;
+      }
 
- .header-email {
-   width: 26px;
-   height: 22px;
- fill: c.$accent-color;
-   display: flex;
-   align-items: center;
- }
+      .logo {
+        display: flex;
+        animation: zoomInLeft 2s cubic-bezier(0, .59, .64, .99);
+      }
 
- .header-phone {
-   width: 26px;
-   height: 22px;
-  fill: c.$accent-color;
-   display: flex;
-   align-items: center;
- }
+      .logo-web {
+        color: c.$button;
+        font-family: t.$logo-font;
+        font-size: 26px;
+        font-weight: t.$standart-weight;
+        line-height: normal;
+        letter-spacing: 0.78px;
+        display: flex;
+      }
 
- .div-contact {
-   align-items: center;
-   gap: 10px;
+      .logo-studio {
+        color: c.$logocolour;
+        font-family: t.$logo-font;
+        font-size: 26px;
+        font-weight: t.$standart-weight;
+        line-height: normal;
+        letter-spacing: 0.78px;
+      }
 
-   &:hover svg {
-   fill: c.$primary-color;
- }
-}
+      .nav {
+        display: none;
+      }
 
-//  .div-contact:hover svg {
-//    fill:  $primary-color;
-//  }
-
- .logo {
-   animation: fadeInDown 1s ease forwards;
-   animation: fadeInDown 1s ease-in-out;
-   display: flex;
-   margin-left: -50px;
-   font-family: "Raleway", sans-serif;
-   text-decoration: none;
- }
-
- .logo-footer {
-   font-family: "Raleway", sans-serif;
-   text-decoration: none;
- }
-
- .web {
-   color: c.$primary-color;
-   font-size: 26px;
-   font-weight: 700;
-   letter-spacing: 0.78px;
- }
-
- .studio {
-   color: c.$black;
-   font-size: 26px;
-   font-weight: 700;
-   letter-spacing: 0.78px;
- }
-
-
- .nav {
-   display: flex;
-   margin-right: 344px;
- }
-
- .nav-list {
-   display: flex;
-   column-gap: 50px;
-   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
- }
-
- .nav-list {
-   list-style: none;
-   display: flex;
-   gap: 20px;
-   padding: 0;
-   margin: 0;
-   
-    &:hover::after,
-    &.active::after {
-      width: 100%;
+      .div {
+        display: none;
+      }
     }
   }
- 
 
- .nav-list a {
-   position: relative;
-   display: inline-block;
-   text-decoration: none;
-   padding: 5px 0;
-   color:  c.$black;
+  @media screen and (min-width:768px) {
 
-   &::after {
-   content: "";
-   position: absolute;
-   left: 0;
-   bottom: -4px;
-   width: 0;
-   height: 4px;
-   background-color: c.$primary-color;
-   border-radius: 2px;
-   transition: width 0.3s ease;
-   top: 57.50px;
- }
+    padding-top: 21px;
+    padding-bottom: 21px;
 
+    .header-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
- }
+      .header-menu {
+        display: none;
+      }
 
+      .logo {
+        display: flex;
+        animation: fadeInDown 1s ease forwards;
+        animation: fadeInDown 1s ease-in-out;
+      }
 
- 
+      .logo-web {
+        color: c.$button;
+        font-family: t.$logo-font;
+        font-size: 26px;
+        font-weight: t.$standart-weight;
+        line-height: normal;
+        letter-spacing: 0.78px;
+        display: flex;
+      }
 
- .nav-page {
-   color: #212121;
-   font-size: 14px;
-   font-weight: 500;
-   line-height: normal;
-   letter-spacing: 0.28px;
-   position: relative;
-   text-decoration: none;
-   padding-bottom: 6px;
+      .logo-studio {
+        color: c.$logocolour;
+        font-family: t.$logo-font;
+        font-size: 26px;
+        font-weight: t.$standart-weight;
+        line-height: normal;
+        letter-spacing: 0.78px;
+      }
 
-   &:hover {
-   color:  c.$primary-color ;
- }
- 
-  &.choosen {
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 4px;
-      background:  c.$primary-color;
-      border-radius: 2px;
+      .nav-page {
+        color: c.$standart-text;
+        font-size: t.$standart-font-size;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.28px;
+        @include transition(none);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+          color: c.$button;
+        }
+      }
+
+      .div-contact {
+        display: flex;
+        color: c.$add-information;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.28px;
+        display: flex;
+        @include transition(none);
+
+        &:hover {
+          color: c.$button;
+          font-family: t.$standart-font;
+          font-size: t.$standart-font-size;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 0.28px;
+        }
+      }
+
+      .nav {
+        display: flex;
+        margin-right: 4.5px;
+      }
+
+      .nav-ul {
+        display: flex;
+        column-gap: 50px;
+      }
+
+      .div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+
+      .choosen {
+        position: relative;
+        color: c.$button;
+
+        @include transition(fill);
+
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          border-radius: 2px;
+          background: c.$button;
+          height: 4px;
+          position: absolute;
+          top: 44px;
+        }
+      }
+
+      .header-email {
+        width: 16px;
+        height: 12px;
+        fill: #757575;
+        display: flex;
+        align-items: center;
+      }
+
+      .header-phone {
+        width: 10px;
+        height: 16px;
+        fill: #757575;
+        display: flex;
+        align-items: center;
+      }
+
+      .div-contact {
+        align-items: center;
+        gap: 8px;
+
+        &:hover svg {
+          fill: c.$button;
+        }
+
+        svg {
+          @include transition(fill);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width:1200px) {
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .header-div {
+      .logo {
+        display: flex;
+        animation: zoomInLeft 2s cubic-bezier(0, .59, .64, .99);
+      }
+
+      .header {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid c.$line;
+
+      }
+
+      .header-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-web {
+        color: c.$button;
+        font-family: t.$logo-font;
+        font-size: 26px;
+        font-weight: t.$standart-weight;
+        line-height: normal;
+        letter-spacing: 0.78px;
+        display: flex;
+      }
+
+      .logo-studio {
+        color: c.$logocolour;
+        font-family: t.$logo-font;
+        font-size: 26px;
+        font-weight: t.$standart-weight;
+        line-height: normal;
+        letter-spacing: 0.78px;
+      }
+
+      .nav-page {
+        color: c.$standart-text;
+        font-size: t.$standart-font-size;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.28px;
+        @include transition(none);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+          color: c.$button;
+        }
+      }
+
+      .div-contact {
+        color: c.$add-information;
+        font-size: t.$standart-font-size;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.28px;
+        display: flex;
+        @include transition(none);
+
+        &:hover {
+          color: c.$button;
+          font-family: t.$standart-font;
+          font-size: t.$standart-font-size;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 0.28px;
+        }
+      }
+
+      .nav {
+        display: flex;
+        margin-right: 225px;
+      }
+
+      .nav-ul {
+        display: flex;
+        column-gap: 50px;
+      }
+
+      .div {
+        display: flex;
+        flex-direction: row;
+        column-gap: 50px;
+      }
+
+      .choosen {
+        position: relative;
+        color: c.$button;
+
+        @include transition(fill);
+
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          border-radius: 2px;
+          background: c.$button;
+          height: 4px;
+          position: absolute;
+          top: 44px;
+        }
+      }
+
+      .header-email {
+        width: 16px;
+        height: 12px;
+        fill: #757575;
+        display: flex;
+        align-items: center;
+      }
+
+      .header-phone {
+        width: 10px;
+        height: 16px;
+        fill: #757575;
+        display: flex;
+        align-items: center;
+      }
+
+      .div-contact {
+        align-items: center;
+        gap: 10px;
+
+        &:hover svg {
+          fill: c.$button;
+        }
+      }
     }
   }
 }
 
- 
- 
- .nav-page.choosen {
-   color:  c.$primary-color ;
- }
-
- 
- 
-.nav {
-  &-1,
-  &-2,
-  &-3 {
-    font-size: 14px;
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.28px;
-    color:  c.$text-color;
-
-    &:hover {
-      color:  c.$primary-color;
-    }
-  }
-}
-
-
- .div-contact {
-   color:  c.$accent-color;
-   font-family: Roboto;
-   font-style: normal;
-   font-size: 14px;
-   font-weight: 500;
-   line-height: normal;
-   letter-spacing: 0.28px;
-   display: flex;
- 
- &:hover {
-   color:  c.$primary-color;
- }
-}
+/*
+}*/

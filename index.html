@@ -8,41 +8,50 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-  href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-  rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <title>WebStudio</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-  </head>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
 <body>
 
-  <header class="header container">
-    <a href="index.html" class="logo"><span class="web">Web</span><span class="studio">Studio</span></a>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-1"><a href="index.html" class="nav-page choosen">Студія</a></li>
-        <li class="nav-2"><a href="portfolio.html"class="nav-page ">Портфоліо</a></li>
-        <li class="nav-3"><a href="#" class="nav-page ">Контакти</a></li>
-      </ul>
-    </nav>
-    <div class="contacts">
-      <a href="mailto:info@gevstudio.com" class="div-contact">
-        <svg class="header-email">
-          <use href="img/SPRITE-ORG.svg#icon-envelope"></use>
+ <header class="header">
+        <div class="container header-div">
+        <a href="#" class="logo"><span class="logo-web">Web</span><span class="logo-studio">Studio</span></a>
+        <svg class="header-menu">
+            <use href="img/symbol-defs.svg#icon-burger-menu"></use>
         </svg>
-        info@gevstudio.com
-      </a>
-      <a href="tel:+380961111111" class="div-contact">
-        <svg class="header-phone">
-          <use href="img/SPRITE-ORG.svg#icon-smartphone"></use>
-        </svg>
-        +38 096 111 11 11</a>
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li class="nav-li">
+                    <a href="#" class="nav-page choosen">Студія</a>
+                </li>
+                <li class="nav-li">
+                    <a href="portfolio.html" class="nav-page">Портфоліо</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#" class="nav-page">Контакти</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="div">
+            <a href="mailto:info@gevstudio.com" class="div-contact">
+                <svg class="header-email">
+                    <use href="img/SPRITE-ORG.svg#icon-envelope"></use>
+                </svg>
+                info@gevstudio.com
+            </a>
+            <a href="tel:+380961111111" class="div-contact">
+                <svg class="header-phone">
+                    <use href="img/SPRITE-ORG.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+        </div></div>
 
-      <div>
-  </header>
+    </header>
 
-   
   <main>
     <section class="business-section">
       <div class="container">
@@ -192,7 +201,7 @@
               </li>
             </ul>
           <li class="team-li">
-            <img src="img/Igor Demyanenko.jpg" class="team-img" alt="Frontend Developer">
+            <img src="img/Mykola Tarasov.jpg" class="team-img" alt="Frontend Developer">
             <h3 class="team-name">Микола Тарасов</h3>
             <p class="team-subtitle">Marketing</p>
             <ul class="social-list">
@@ -301,7 +310,7 @@
     </section>
   </main>
   </div>
-   <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="footer-div-2">
         <div class="footer-div">
@@ -364,10 +373,10 @@
         </form>
       </div>
     </div>
- 
+
   </footer>
   <!-- =========================================== modal==================================================== -->
-   <div class="callback-modal is-hidden" id="callbackModal" data-modal>
+  <div class="callback-modal is-hidden" id="callbackModal" data-modal>
     <div class="callback-modal__content">
       <span class="callback-modal__close" data-modal-close>&times;</span>
       <h2 class="input-text">Залиште свої дані, ми вам передзвонимо</h2>
@@ -415,4 +424,4 @@
   <script src="./modal.js"></script>
 </body>
 
-</html> 
+</html>
