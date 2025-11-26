@@ -21,7 +21,7 @@
         <div class="container header-div">
         <a href="index.html" class="logo"><span class="logo-web">Web</span><span class="logo-studio">Studio</span></a>
         <svg class="header-menu">
-            <use href="img/symbol-defs.svg#icon-burger-menu"></use>
+            <use href="img/symbol-defs.svg#icon-burger-menu" data-modal-menu-open></use>
         </svg>
         <nav class="nav">
             <ul class="nav-ul">
@@ -48,7 +48,7 @@
                     <use href="img/SPRITE-ORG.svg#icon-smartphone"></use>
                 </svg>
                 +38 096 111 11 11</a>
-        </div></div>
+      
 
     </header>
 
@@ -418,10 +418,40 @@
     </div>
   </div>
 
+   <!-- =========================================== modal-menu==================================================== -->
+
+<div class="callback-modal is-hidden" id="callbackModal" data-modal-menu>
+    <div class="callback-modal__content">
+       <nav class="nav-menu">
+            <ul class="nav-ul-menu">
+                <li class="nav-li-menu">
+                    <a href="index.html" class="nav-page-menu choosen">Студія</a>
+                </li>
+                <li class="nav-li-menu">
+                    <a href="portfolio.html" class="nav-page-menu">Портфоліо</a>
+                </li>
+                <li class="nav-li-menu">
+                    <a href="#" class="nav-page-menu">Контакти</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="div-menu">
+            <a href="mailto:info@gevstudio.com" class="div-contact-menu">
+                <svg class="header-email-menu">
+                    <use href="img/SPRITE-ORG.svg#icon-envelope"></use>
+                </svg>
+                info@gevstudio.com
+            </a>
+            <a href="tel:+380961111111" class="div-contact-menu">
+                <svg class="header-phone">
+                    <use href="img/SPRITE-ORG.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+  </div>
 
 
-
-  <script src="./modal.js"></script>
+  <script src="./js/modal.js"></script>
+   <script src="./js/modal-menu.js"></script>
 </body>
 
 </html>

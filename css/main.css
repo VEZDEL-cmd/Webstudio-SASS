@@ -63,18 +63,18 @@ body {
   font-family: Roboto;
 }
 
-.work-title, .work-team .team-title, .clients .clients-title {
+.work .work-title, .work-team .team-title, .clients .clients-title {
   color: #212121;
   font-weight: 700;
 }
 @media screen and (min-width: 480px) {
-  .work-title, .work-team .team-title, .clients .clients-title {
+  .work .work-title, .work-team .team-title, .clients .clients-title {
     letter-spacing: 1.03px;
     font-size: 28px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .work-title, .work-team .team-title, .clients .clients-title {
+  .work .work-title, .work-team .team-title, .clients .clients-title {
     font-size: 36px;
     letter-spacing: 1.08px;
   }
@@ -1338,36 +1338,15 @@ body {
   }
 }
 
-@media screen and (min-width: 320px) {
-  .work {
-    display: none;
-  }
+.work {
+  display: none;
 }
-@media screen and (min-width: 780px) {
-  .work {
-    display: block;
-  }
-}
-
-.work-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.leisure-img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-
-.work-title {
+.work .work-title {
   text-align: center;
   padding-bottom: 50px;
 }
-
-.leisure-span {
+.work .leisure-span {
   display: flex;
-  width: 370px;
   height: 70px;
   bottom: 70px;
   font-size: 14px;
@@ -1381,4 +1360,14 @@ body {
   background: rgba(47, 48, 58, 0.8);
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .work {
+    display: block;
+  }
+  .work .work-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
 }/*# sourceMappingURL=main.css.map */
