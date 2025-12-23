@@ -17,40 +17,43 @@
 
 <body>
 
- <header class="header">
-        <div class="container header-div">
-        <a href="index.html" class="logo"><span class="logo-web">Web</span><span class="logo-studio">Studio</span></a>
-        <svg class="header-menu">
-            <use href="img/symbol-defs.svg#icon-burger-menu" data-modal-menu-open></use>
-        </svg>
-        <nav class="nav">
-            <ul class="nav-ul">
-                <li class="nav-li">
-                    <a href="index.html" class="nav-page choosen">Студія</a>
-                </li>
-                <li class="nav-li">
-                    <a href="portfolio.html" class="nav-page">Портфоліо</a>
-                </li>
-                <li class="nav-li">
-                    <a href="#" class="nav-page">Контакти</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="div">
-            <a href="mailto:info@gevstudio.com" class="div-contact">
-                <svg class="header-email">
-                    <use href="img/SPRITE-ORG.svg#icon-envelope"></use>
-                </svg>
-                info@gevstudio.com
-            </a>
-            <a href="tel:+380961111111" class="div-contact">
-                <svg class="header-phone">
-                    <use href="img/SPRITE-ORG.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a>
-      
+  <header class="header">
+    <div class="container header-div">
+      <a href="index.html" class="logo"><span class="logo-web">Web</span><span class="logo-studio">Studio</span></a>
+      <svg class="header-menu" menu-data-modal-open>>
+        <use href="img/symbol-defs.svg#icon-burger-menu"> </use>
+      </svg>
 
-    </header>
+
+
+      <nav class="nav">
+        <ul class="nav-ul">
+          <li class="nav-li">
+            <a href="index.html" class="nav-page choosen">Студія</a>
+          </li>
+          <li class="nav-li">
+            <a href="portfolio.html" class="nav-page">Портфоліо</a>
+          </li>
+          <li class="nav-li">
+            <a href="#" class="nav-page">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="div">
+        <a href="mailto:info@gevstudio.com" class="div-contact">
+          <svg class="header-email">
+            <use href="img/SPRITE-ORG.svg#icon-envelope"></use>
+          </svg>
+          info@gevstudio.com
+        </a>
+        <a href="tel:+380961111111" class="div-contact">
+          <svg class="header-phone">
+            <use href="img/SPRITE-ORG.svg#icon-smartphone"></use>
+          </svg>
+          +38 096 111 11 11</a>
+
+
+  </header>
 
   <main>
     <section class="business-section">
@@ -375,7 +378,12 @@
     </div>
 
   </footer>
-  <!-- =========================================== modal==================================================== -->
+
+
+
+  
+  
+  <!--=========================================== modal==================================================== -->
   <div class="callback-modal is-hidden" id="callbackModal" data-modal>
     <div class="callback-modal__content">
       <span class="callback-modal__close" data-modal-close>&times;</span>
@@ -418,40 +426,58 @@
     </div>
   </div>
 
-   <!-- =========================================== modal-menu==================================================== -->
+  <!-- =========================================== modal-menu==================================================== -->
 
-<div class="callback-modal is-hidden" id="callbackModal" data-modal-menu>
-    <div class="callback-modal__content">
-       <nav class="nav-menu">
-            <ul class="nav-ul-menu">
-                <li class="nav-li-menu">
-                    <a href="index.html" class="nav-page-menu choosen">Студія</a>
+ <div class=""></div>
+  <div menu-data-modal class="burger-menu is-hidden">
+        <nav class="burger-nav">
+            <ul class="burger-nav-ul">
+                <li class="burger-nav-li">
+                    <a href="index.html" class="burger-nav-page choosen">Студія</a>
                 </li>
-                <li class="nav-li-menu">
-                    <a href="portfolio.html" class="nav-page-menu">Портфоліо</a>
+                <li class="burger-nav-li">
+                    <a href="portfolio.html" class="burger-nav-page">Портфоліо</a>
                 </li>
-                <li class="nav-li-menu">
-                    <a href="#" class="nav-page-menu">Контакти</a>
+                <li class="burger-nav-li">
+                    <a href="#" class="burger-nav-page">Контакти</a>
                 </li>
             </ul>
         </nav>
-        <div class="div-menu">
-            <a href="mailto:info@gevstudio.com" class="div-contact-menu">
-                <svg class="header-email-menu">
-                    <use href="img/SPRITE-ORG.svg#icon-envelope"></use>
-                </svg>
+        <div class="burger-div">
+                
+            <a href="tel:+380961111111" class="burger-div-contact-num">
+                +38 096 111 11 11</a>
+            <a href="mailto:info@gevstudio.com" class="burger-div-contact-em">
                 info@gevstudio.com
             </a>
-            <a href="tel:+380961111111" class="div-contact-menu">
-                <svg class="header-phone">
-                    <use href="img/SPRITE-ORG.svg#icon-smartphone"></use>
+            <ul class="burger-sites">
+                <li class="burger-sites-li">
+                    <a class="burger-sites-a" href="Instagram.com">Instagram</a>
+                    <div class="burger-sites-line"></div>
+                </li>
+                <li class="burger-sites-li">
+                    <a class="burger-sites-a" href="x.com">Twitter</a>
+                    <div class="burger-sites-line"></div>
+                </li>
+                <li class="burger-sites-li">
+                    <a class="burger-sites-a" href="Facebook.com">Facebook</a>
+                    <div class="burger-sites-line"></div>
+                </li>
+                <li class="burger-sites-li">
+                    <a class="burger-sites-a" href="LinkedIn.com">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+        <div class="burger-svg-close" menu-data-modal-close>
+                <svg>
+                    <use href="img/symbol-defs.svg#icon-close"></use>
                 </svg>
-                +38 096 111 11 11</a>
-  </div>
+            </div>
+    </div>
 
 
-  <script src="./js/modal.js"></script>
-   <script src="./js/modal-menu.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/modal-menu.js"></script>
 </body>
 
 </html>
