@@ -1,4 +1,4 @@
- :root {
+ /* :root {
    --primary-color: #2196f3;
    --text-color: #212121;
    --accent-color: #757575;
@@ -69,7 +69,7 @@
    font-family: "Roboto", sans-serif;
    line-height: 1.71;
    color: var(--text-color);
- }
+ } */
 
  /* .container {
    width: 1200px;
@@ -274,7 +274,7 @@
  } */
 
 
-
+/* 
 
  .callback-modal {
    position: fixed;
@@ -887,7 +887,7 @@
 
  .form-button__icon {
    fill: currentColor;
- }
+ } */
 
  /* ==========================
    Portfolio

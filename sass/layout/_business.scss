@@ -9,15 +9,60 @@
 .business-section {
   background-color: c.$header-fotter;
   padding-bottom: 118px;
-  background-image:
-    linear-gradient(#2F303A66, #2F303A66),
-    url("../img/bg-img.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+ 
+  @media screen and (min-width: 320px) {
+    background-image:
+      linear-gradient(#2F303A66, #2F303A66),
+      url("../img/Header-img1x.jpg");
 
-  @media screen and (min-width:320px) {
-    background-size: 100vw 100%;
+    @media (min-device-pixel-ratio: 2),
+           (-webkit-min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(#2F303A66, #2F303A66),
+        url("../img/Header-img2x.jpg");
+    }
+  }
+ 
+@media screen and (min-width: 768px) {
+    background-image:
+      linear-gradient(#2F303A66, #2F303A66),
+      url("../img/Tabletbg@1x.jpg");
+  }
 
+   
+  @media screen and (min-width: 768px) and
+    (min-device-pixel-ratio: 2),
+    screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 768px) and (min-resolution: 192dpi),
+    screen and (min-width: 768px) and (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(#2F303A66, #2F303A66),
+        url("../img/Tabletbg@2x.jpg");
+  }
+
+ 
+  @media screen and (min-width: 1200px) {
+    background-image:
+      linear-gradient(#2F303A66, #2F303A66),
+      url("../img/bg-img@1x.jpg");
+  }
+
+ 
+  @media screen and (min-width: 1200px) and
+    (min-device-pixel-ratio: 2),
+    screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: 1200px) and (min-resolution: 192dpi),
+    screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(#2F303A66, #2F303A66),
+        url("../img/bg-img@2x.jpg");
+  }
+ 
     .business-title {
       color: c.$h1text;
       animation: fadeInUp 1s ease forwards;
@@ -51,9 +96,17 @@
     .business-button-text {
       text-align: center;
     }
-  }
-
-  @media screen and (min-width:768px) {
+  
+    @media screen and (min-width:768px){
+        background-image: linear-gradient(#2F303A66,#2F303A66), url(/img/Tabletbg@1x.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) 
+        {
+            background-image: linear-gradient(#2F303A66,#2F303A66), url(/img/Tabletbg@1x.jpg);
+        }
+      }
     .business-title {
       color: c.$h1text;
       padding: 118px 0 30px 0;
@@ -87,11 +140,19 @@
     .business-button-title {
       text-align: center;
     }
-  }
+  
+    @media screen and (min-width:1200px){
 
-  @media screen and (min-width:1200px) {
-    padding-bottom: 200px;
-
+        background-image: linear-gradient(#2F303A66,#2F303A66), url(/img/bg-img@1x.jpg);
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) 
+                {
+            background-image: linear-gradient(#2F303A66,#2F303A66), url(/img/bg-img@2x.jpg);
+        }
+      
+      }
     .business-title {
       color: c.$h1text;
       padding: 200px 0 30px 0;
@@ -124,11 +185,11 @@
     .business-button-title {
       text-align: center;
     }
-  }
-}
+  
+ 
 
 @media screen and (min-width:1600px) {
   .business {
     background-size: auto auto;
   }
-}
+} }

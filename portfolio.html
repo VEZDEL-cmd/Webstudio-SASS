@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.css"
-    integrity="sha512-gnAN+RgTMylunXI7AMg+PtcUGpKZFkZJoFIkAWvdPFRrFJz3p2tx4+9xbjILRfN7CzoViMgS8vSf06fSQzWZjA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="img/WebStudio.png" type="img/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <title>WebStudio</title>
 
   <link rel="stylesheet" href="./css/main.css">
@@ -22,9 +21,10 @@
   <header class="header">
     <div class="container header-div">
       <a href="index.html" class="logo"><span class="logo-web">Web</span><span class="logo-studio">Studio</span></a>
-      <svg class="header-menu">
-        <use href="img/symbol-defs.svg#icon-burger-menu"></use>
+      <svg class="header-menu" menu-data-modal-open >
+        <use href="img/symbol-defs.svg#icon-burger-menu"> </use>
       </svg>
+
       <nav class="nav">
         <ul class="nav-ul">
           <li class="nav-li">
@@ -77,7 +77,7 @@
       <ul class="portfolio-portfolio">
         <li>
           <div class="portfolio-div">
-            <img src="img/mac.jpg" alt="1" class="portfolio-image">
+            <img  srcset="/img/portfolio/mac@1x.jpg , /img/portfolio/mac@2x.jpg" src="/img/portfolio/mac@1x.jpg" alt="1" class="portfolio-image">
             <p class="portfolio-div-p">
               Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
               відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -92,7 +92,7 @@
         </li>
         <li>
           <div class="portfolio-div">
-          <img src="img/volleyball.jpg" alt="2" class="portfolio-image">
+          <img  srcse="/img/portfolio/volleyball@1x.jpg , /img/portfolio/volleyball@2x.jpg"     src="/img/portfolio/volleyball@1x.jpg" alt="2" class="portfolio-image">
            <p class="portfolio-div-p">
               Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
               відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -107,7 +107,7 @@
         </li>
         <li>
           <div class="portfolio-div">
-          <img src="img/fish.jpg" alt="3" class="portfolio-image">
+          <img   srcset="/img/portfolio/fish@1x.jpg , /img/portfolio/fish@2x.jpg"  src="/img/portfolio/fish@1x.jpg" alt="3" class="portfolio-image">
            <p class="portfolio-div-p">
               Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
               відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -122,7 +122,7 @@
         </li>
         <li>
           <div class="portfolio-div">
-          <img src="img/Headphone.jpg" alt="4" class="portfolio-image">
+          <img   srcset="/img/portfolio/Headphone@1x.jpg , /img/portfolio/Headphone@2x.jpg" src="/img/portfolio/Headphone@x1.jpg" alt="4" class="portfolio-image">
            <p class="portfolio-div-p">
               Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
               відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -137,7 +137,7 @@
         </li>
         <li>
           <div class="portfolio-div">
-          <img src="img/postcards.jpg" alt="5" class="portfolio-image">
+          <img    srcset="/img/portfolio/postcards@1x.jpg , /img/portfolio/postcards@2x.jpg" src="/img/portfolio/postcards@1x.jpg" alt="5" class="portfolio-image">
            <p class="portfolio-div-p">
               Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
               відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -152,7 +152,7 @@
         </li>
         <li>
           <div class="portfolio-div">
-          <img src="img/mac.pc.jpg" alt="6" class="portfolio-image">
+          <img   srcset="/img/portfolio/mac.pc@1x.jpg , /img/portfolio/mac.pc@2x.jpg" src="/img/portfoliomac.pc@1x.jpg" alt="6" class="portfolio-image">
            <p class="portfolio-div-p">
               Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
               відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -167,7 +167,7 @@
         </li>
         <li>
           <div class="portfolio-div">
-          <img src="img/magazine.jpg" alt="7" class="portfolio-image">
+          <img  srcset="/img/portfolio/magazine@1x.jpg , /img/portfolio/magazine@2x.jpg"  src="/img/portfolio/magazine@x1.jpg" alt="7" class="portfolio-image">
            <p class="portfolio-div-p">
               Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
               відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -182,7 +182,7 @@
         </li>
         <li>
           <div class="portfolio-div">
-          <img src="img/tag.jpg" alt="8" class="portfolio-image">
+          <img   srcset="/img/portfolio/tag@1X.jpg , /img/portfolio/tag@2x.jpg" src="/img/portfolio/tag@1X.jpg" alt="8" class="portfolio-image">
            <p class="portfolio-div-p">
               Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
               відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
@@ -197,7 +197,7 @@
         </li>
         <li>
           <div class="portfolio-div">
-          <img src="img/mac2.jpg" alt="9" class="portfolio-image">
+          <img  srcset="/img/portfolio/mac2@1X.jpg , /img/portfolio/mac2@2X.jpg" src="/img/portfolio/mac2@1X.jpg" alt="9" class="portfolio-image">
            <p class="portfolio-div-p">
               Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
               відвідувачу отримати вичерпні відомості про компанію чи приватну особу.

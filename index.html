@@ -20,7 +20,7 @@
   <header class="header">
     <div class="container header-div">
       <a href="index.html" class="logo"><span class="logo-web">Web</span><span class="logo-studio">Studio</span></a>
-      <svg class="header-menu" menu-data-modal-open>>
+      <svg class="header-menu" menu-data-modal-open>
         <use href="img/symbol-defs.svg#icon-burger-menu"> </use>
       </svg>
 
@@ -134,7 +134,7 @@
         <h2 class="team-title">Наша команда</h2>
         <ul class="team-list">
           <li class="team-li">
-            <img src="img/Igor Demyanenko.jpg" class="team-img" alt="Product Designer">
+            <img srcset="img/Igor Demyanenko@1x.jpg,img/Igor Demyanenko@1x.jpg " src="img/Igor Demyanenko@1x.jpg"  class="team-img" alt="Product Designer">
             <h3 class="team-name">Ігор Дем'яненко</h3>
             <p class="team-subtitle">Product Designer</p>
             <ul class="social-list">
@@ -170,7 +170,7 @@
           </li>
           </li>
           <li class="team-li">
-            <img src="img/Olga Repina.jpg" class="team-img" alt="Frontend Developer">
+            <img srcset="img/Olga Repina@1x.jpg , img/Olga Repina2x.jpg" src="img/Olga Repina@1x.jpg" class="team-img" alt="Frontend Developer">
             <h3 class="team-name">Ольга Рєпіна</h3>
             <p class="team-subtitle">Frontend Developer</p>
             <ul class="social-list">
@@ -204,7 +204,7 @@
               </li>
             </ul>
           <li class="team-li">
-            <img src="img/Mykola Tarasov.jpg" class="team-img" alt="Frontend Developer">
+            <img srcset="img/Mykola Tarasov@1x.jpg , img/Mykola Tarasov@2x.jpg" src="img/Mykola Tarasov@1x.jpg" class="team-img" alt="Frontend Developer">
             <h3 class="team-name">Микола Тарасов</h3>
             <p class="team-subtitle">Marketing</p>
             <ul class="social-list">
@@ -240,7 +240,7 @@
           </li>
           </li>
           <li class="team-li">
-            <img src="img/Mykhailo Ermakov.jpg" class="team-img" alt="UI Designer">
+            <img srcset="img/Mykhailo Ermakov@1x.jpg ,img/Mykhailo Ermakov@2x.jpg" src="img/Mykhailo Ermakov@1x.jpg" class="team-img" alt="UI Designer">
             <h3 class="team-name">Михайло Єрмаков</h3>
             <p class="team-subtitle">UI Designer</p>
             <ul class="social-list">
@@ -428,12 +428,12 @@
 
   <!-- =========================================== modal-menu==================================================== -->
 
- <div class=""></div>
+ <div class="burger-beckdrop"></div>
   <div menu-data-modal class="burger-menu is-hidden">
         <nav class="burger-nav">
             <ul class="burger-nav-ul">
                 <li class="burger-nav-li">
-                    <a href="index.html" class="burger-nav-page choosen">Студія</a>
+                    <a href="#" class="burger-nav-page choosen">Студія</a>
                 </li>
                 <li class="burger-nav-li">
                     <a href="portfolio.html" class="burger-nav-page">Портфоліо</a>
@@ -468,13 +468,13 @@
                 </li>
             </ul>
         </div>
-        <div class="burger-svg-close" menu-data-modal-close>
-                <svg>
-                    <use href="img/symbol-defs.svg#icon-close"></use>
-                </svg>
+        <div class="burger-svg-close" >
+
+          <span   width="30" height="30"   class="modal-menu-close"  menu-data-modal-close>&times;</span>
+               
             </div>
     </div>
-
+</div>
 
   <script src="js/modal.js"></script>
   <script src="js/modal-menu.js"></script>
